@@ -105,6 +105,16 @@ export default async function ClinicPage({ params }: Props) {
 
       <div className="grid gap-block lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
         {/* First in the page (a phone shows it first), on the right on wide screens. */}
+        {clinic.whatToBring && clinic.whatToBring.length > 0 && (
+          <>
+            <h3 className="text-xl">What to bring</h3>
+            <ul className="grid max-w-(--container-reading) list-disc gap-1 pl-5">
+              {clinic.whatToBring.map((row) => (
+                <li key={row.id ?? row.item}>{row.item}</li>
+              ))}
+            </ul>
+          </>
+        )}
         <section aria-labelledby="facts" className="framed grid gap-4 p-6 offset-coral lg:col-start-2 lg:row-start-1">
           <h2 id="facts" className="text-xl">At a glance</h2>
           <dl className="grid grid-cols-[auto_minmax(0,1fr)] gap-x-4 gap-y-2">
