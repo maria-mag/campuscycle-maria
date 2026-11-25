@@ -85,7 +85,7 @@ function RepairChoice({ repairs }: { repairs: BookingFormProps['repairs'] }) {
   return (
     <fieldset className="grid gap-3">
       <legend className="mb-1 font-semibold">
-        Repairs <span className="font-normal text-ink-soft">(optional)</span>
+        Repairs <span className="font-normal text-ink-soft">(optional: tick what you need, prices are in the list above. Not sure? Leave it empty and describe the problem in the note.)</span>
       </legend>
       {repairs.map((repair) => {
         // To show each repair's price too, replace the line under this comment with this line:
